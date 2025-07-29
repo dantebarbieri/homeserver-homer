@@ -1,0 +1,40 @@
+subtitle: "Manage the Home Server"
+
+# This overwrites message config. Setting it to empty to remove message from this page and keep it only in the main one:
+message:
+  title: "Important"
+  icon: "fa fa-house-laptop"
+  content: "You can only manage the server while connected to the home network."
+
+# as we want to include a differente link here (so we can get back to home page), we need to replicate all links or they will be revome when overwriting the links field:
+links:
+  - name: "Home"
+    icon: "fas fa-home"
+    url: "#"
+  - name: "Docker"
+    icon: "fab fa-docker"
+    url: "https://github.com/dantebarbieri/homeserver-docker"
+    target: "_blank" # optional html a tag target attribute
+  - name: "NixOS"
+    icon: "fab fa-linux"
+    url: "https://github.com/dantebarbieri/homeserver-nixos"
+    target: "_blank" # optional html a tag target attribute
+
+services:
+  - name: "Management"
+    icon: "fas fa-laptop-code"
+    items:
+      - name: "IPMI"
+        logo: "assets/tools/asrock_rack_logo.png"
+        subtitle: "BMC Management"
+        tag: "local"
+        keywords: "management"
+        url: "https://192.168.1.8"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Netgear Nighthawk"
+        logo: "assets/tools/router_logo.png"
+        subtitle: "Router Settings"
+        tag: "local"
+        keywords: "management"
+        url: "https://www.routerlogin.com"
+        target: "_blank" # optional html a tag target attribute

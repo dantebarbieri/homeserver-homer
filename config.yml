@@ -8,7 +8,7 @@ logo: "logo.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
 header: true
-footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
+footer: '<p>Created with <a href="https://github.com/bastienwirtz/homer">Homer</a>.</p>' # set false if you want to hide it.
 
 columns: "auto" # "auto" or number (must be a factor of 12: 1, 2, 3, 4, 6, 12)
 connectivityCheck: true # whether you want to display a message when the apps are not accessible anymore (VPN disconnected for example).
@@ -49,28 +49,32 @@ colors:
     link-hover: "#ffdd57"
 
 # Optional message
-# message:
-#   url: https://status.danteb.com
+message:
+  url: https://github.com/dantebarbieri/homeserver-homer
 #   style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
-#   title: "Monitoring"
-#   icon: "fa fa-heart-pulse"
-#   content: "Monitoring provided by Dash."
+  title: "Homer Homepage"
+  icon: "fa fa-home"
+  content: "This homepage uses Homer to display all the services running on my home server."
 
 # Optional navbar
-links: [] # Allows for navbar (dark mode, layout, and search) without any links
-# links:
-#   - name: "Contribute"
-#     icon: "fab fa-github"
-#     url: "https://github.com/bastienwirtz/homer"
-#     target: "_blank" # optional html a tag target attribute
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "Docker"
+    icon: "fab fa-docker"
+    url: "https://github.com/dantebarbieri/homeserver-docker"
+    target: "_blank" # optional html a tag target attribute
+  - name: "NixOS"
+    icon: "fab fa-linux"
+    url: "https://github.com/dantebarbieri/homeserver-nixos"
+    target: "_blank" # optional html a tag target attribute
 #   - name: "Wiki"
 #     icon: "fas fa-book"
 #     url: "https://www.wikipedia.org/"
 #   # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
 #   # see url field and assets/additional-page.yml.dist used in this example:
-#   #- name: "another page!"
-#   #  icon: "fas fa-file-alt"
-#   #  url: "#additional-page"
+  - name: "Management"
+    icon: "fas fa-file-alt"
+    url: "#management"
 
 # Services
 # First level array represent a group.
@@ -79,8 +83,8 @@ services:
   - name: "Game Servers"
     icon: "fas fa-server"
     items:
-      - name: "Custom Tekkit Minecraft"
-        logo: "assets/tools/tekkit_logo.png"
+      - name: "Hardcore Minecraft"
+        logo: "assets/tools/hardcore_logo.png"
         subtitle: "mc.danteb.com"
         tag: "server"
         keywords: "game mc minecraft"
@@ -92,40 +96,6 @@ services:
         tag: "server"
         keywords: "game mc minecraft"
         url: "https://mcsrvstat.us/server/rlcraft.danteb.com"
-        target: "_blank" # optional html a tag target attribute
-  - name: "Networking"
-    icon: "fas fa-network-wired"
-    items:
-      - name: "Adguard Home"
-        logo: "assets/homer-icons/svg/adguardhome.svg"
-        subtitle: "Ad-Blocking DNS & DHCP"
-        tag: "app"
-        keywords: "network"
-        url: "https://adguard.danteb.com"
-        target: "_blank" # optional html a tag target attribute
-      - name: "Nginx Proxy Manager"
-        logo: "assets/homer-icons/png/nginxproxymanager.png"
-        subtitle: "Reverse Proxy"
-        tag: "app"
-        keywords: "media"
-        url: "https://nginx-proxy-manager.danteb.com"
-        target: "_blank" # optional html a tag target attribute
-  - name: "Utilities"
-    icon: "fas fa-gears"
-    items:
-      - name: "SearXNG"
-        logo: "assets/homer-icons/png/searxmetasearchengine.png"
-        subtitle: "Metasearch Engine"
-        tag: "app"
-        keywords: "utilities search searx"
-        url: "https://searxng.danteb.com"
-        target: "_blank" # optional html a tag target attribute
-      - name: "Vaultwarden"
-        logo: "assets/homer-icons/png/vaultwarden.png"
-        subtitle: "Password Manager"
-        tag: "app"
-        keywords: "utilities password bitwarden"
-        url: "https://vaultwarden.danteb.com"
         target: "_blank" # optional html a tag target attribute
   - name: "Media"
     icon: "fas fa-tv"
@@ -143,6 +113,54 @@ services:
         tag: "app"
         keywords: "media"
         url: "https://immich.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+  - name: "Utilities"
+    icon: "fas fa-gears"
+    items:
+      - name: "Authelia"
+        logo: "assets/homer-icons/svg/authelia.svg"
+        subtitle: "Two-Factor Authentication"
+        tag: "app"
+        keywords: "security"
+        url: "https://authelia.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Dashdot"
+        logo: "assets/tools/dashdot_logo.png"
+        subtitle: "Server status"
+        tag: "app"
+        keywords: "monitoring"
+        url: "https://dashdot.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+      - name: "SearXNG"
+        logo: "assets/homer-icons/png/searxmetasearchengine.png"
+        subtitle: "Metasearch Engine"
+        tag: "app"
+        keywords: "utilities search searx"
+        url: "https://searxng.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Vaultwarden"
+        logo: "assets/homer-icons/png/vaultwarden.png"
+        subtitle: "Password Manager"
+        tag: "app"
+        keywords: "utilities password bitwarden"
+        url: "https://vaultwarden.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+  - name: "Networking"
+    icon: "fas fa-network-wired"
+    items:
+      - name: "Adguard Home"
+        logo: "assets/homer-icons/svg/adguardhome.svg"
+        subtitle: "Ad-Blocking DNS & DHCP"
+        tag: "app"
+        keywords: "network"
+        url: "https://adguard.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Nginx Proxy Manager"
+        logo: "assets/homer-icons/png/nginxproxymanager.png"
+        subtitle: "Reverse Proxy"
+        tag: "app"
+        keywords: "media"
+        url: "https://nginx-proxy-manager.danteb.com"
         target: "_blank" # optional html a tag target attribute
   - name: "Peer to Peer"
     icon: "fas fa-circle-nodes"
@@ -195,35 +213,4 @@ services:
         tag: "app"
         keywords: "p2p"
         url: "https://sabnzbd.danteb.com"
-        target: "_blank" # optional html a tag target attribute
-  - name: "Management"
-    icon: "fas fa-tv"
-    items:
-      - name: "Dashdot"
-        logo: "assets/tools/dashdot_logo.png"
-        subtitle: "Server status"
-        tag: "app"
-        keywords: "monitoring"
-        url: "https://dashdot.danteb.com"
-        target: "_blank" # optional html a tag target attribute
-      - name: "Authelia"
-        logo: "assets/homer-icons/svg/authelia.svg"
-        subtitle: "Two-Factor Authentication"
-        tag: "app"
-        keywords: "security"
-        url: "https://authelia.danteb.com"
-        target: "_blank" # optional html a tag target attribute
-      - name: "IPMI"
-        logo: "assets/tools/asrock_rack_logo.png"
-        subtitle: "BMC Management"
-        tag: "local"
-        keywords: "management"
-        url: "https://192.168.1.8"
-        target: "_blank" # optional html a tag target attribute
-      - name: "Netgear Nighthawk"
-        logo: "assets/tools/router_logo.png"
-        subtitle: "Router Settings"
-        tag: "local"
-        keywords: "management"
-        url: "https://www.routerlogin.com"
         target: "_blank" # optional html a tag target attribute
