@@ -174,7 +174,7 @@ services:
         url: "https://sabnzbd.danteb.com"
         target: "_blank" # optional html a tag target attribute
   - name: "Starr"
-    icon: "fas fa-stars"
+    icon: "fas fa-star"
     items:
       - name: "Radarr"
         logo: "assets/homer-icons/svg/radarr.svg"
