@@ -79,12 +79,6 @@ services:
   - name: "Game Servers"
     icon: "fas fa-server"
     items:
-      - name: "Counter-Strike 2"
-        logo: "assets/tools/cs2_logo.jpg"
-        subtitle: "connect danteb.com:27015"
-        tag: "server"
-        keywords: "game cs2 steam"
-        url: "steam://connect/24.55.20.222:27015"
       - name: "Custom Tekkit Minecraft"
         logo: "assets/tools/tekkit_logo.png"
         subtitle: "mc.danteb.com"
@@ -119,13 +113,6 @@ services:
   - name: "Utilities"
     icon: "fas fa-gears"
     items:
-      - name: "Open WebUI"
-        logo: "assets/tools/open_webui_logo.png"
-        subtitle: "Generative AI"
-        tag: "app"
-        keywords: "utilities chat gpt ai llama "
-        url: "https://chat.danteb.com"
-        target: "_blank" # optional html a tag target attribute
       - name: "SearXNG"
         logo: "assets/homer-icons/png/searxmetasearchengine.png"
         subtitle: "Metasearch Engine"
@@ -155,7 +142,7 @@ services:
         subtitle: "Photos"
         tag: "app"
         keywords: "media"
-        url: "https://images.danteb.com"
+        url: "https://immich.danteb.com"
         target: "_blank" # optional html a tag target attribute
   - name: "Peer to Peer"
     icon: "fas fa-circle-nodes"
@@ -217,7 +204,14 @@ services:
         subtitle: "Server status"
         tag: "app"
         keywords: "monitoring"
-        url: "https://status.danteb.com"
+        url: "https://dashdot.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Authelia"
+        logo: "assets/homer-icons/svg/authelia.svg"
+        subtitle: "Two-Factor Authentication"
+        tag: "app"
+        keywords: "security"
+        url: "https://authelia.danteb.com"
         target: "_blank" # optional html a tag target attribute
       - name: "IPMI"
         logo: "assets/tools/asrock_rack_logo.png"
