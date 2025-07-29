@@ -8,7 +8,8 @@ logo: "logo.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
 header: true
-footer: '<p>Created with <a href="https://github.com/bastienwirtz/homer">Homer</a>.</p>' # set false if you want to hide it.
+# footer: '<p>Created with <a href="https://github.com/bastienwirtz/homer">Homer</a>.</p>' # set false if you want to hide it.
+footer: false # set false if you want to hide it.
 
 columns: "auto" # "auto" or number (must be a factor of 12: 1, 2, 3, 4, 6, 12)
 connectivityCheck: true # whether you want to display a message when the apps are not accessible anymore (VPN disconnected for example).
@@ -50,15 +51,18 @@ colors:
 
 # Optional message
 message:
-  url: https://github.com/dantebarbieri/homeserver-homer
+  # url: https://github.com/dantebarbieri/homeserver-homer
 #   style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
   title: "Homer Homepage"
   icon: "fa fa-home"
-  content: "This homepage uses Homer to display all the services running on my home server."
+  content: "This homepage uses <a href='https://github.com/bastienwirtz/homer'>Homer</a> to display all the services running on my home server. You can find the source code on <a href='https://github.com/dantebarbieri/homeserver-homer'>GitHub</a>."
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
 links:
+  - name: "Home"
+    icon: "fas fa-home"
+    url: "#"
   - name: "Docker"
     icon: "fab fa-docker"
     url: "https://github.com/dantebarbieri/homeserver-docker"
@@ -100,6 +104,13 @@ services:
   - name: "Media"
     icon: "fas fa-tv"
     items:
+      - name: "Overseerr"
+        logo: "assets/homer-icons/svg/overseerr.svg"
+        subtitle: "Request Content"
+        tag: "app"
+        keywords: "p2p"
+        url: "https://overseerr.danteb.com"
+        target: "_blank" # optional html a tag target attribute
       - name: "Plex"
         logo: "assets/homer-icons/svg/plex.svg"
         subtitle: "Movies & TV"
@@ -145,33 +156,26 @@ services:
         keywords: "utilities password bitwarden"
         url: "https://vaultwarden.danteb.com"
         target: "_blank" # optional html a tag target attribute
-  - name: "Networking"
-    icon: "fas fa-network-wired"
+  - name: "Downloaders"
+    icon: "fas fa-download"
     items:
-      - name: "Adguard Home"
-        logo: "assets/homer-icons/svg/adguardhome.svg"
-        subtitle: "Ad-Blocking DNS & DHCP"
-        tag: "app"
-        keywords: "network"
-        url: "https://adguard.danteb.com"
-        target: "_blank" # optional html a tag target attribute
-      - name: "Nginx Proxy Manager"
-        logo: "assets/homer-icons/png/nginxproxymanager.png"
-        subtitle: "Reverse Proxy"
-        tag: "app"
-        keywords: "media"
-        url: "https://nginx-proxy-manager.danteb.com"
-        target: "_blank" # optional html a tag target attribute
-  - name: "Peer to Peer"
-    icon: "fas fa-circle-nodes"
-    items:
-      - name: "Overseerr"
-        logo: "assets/homer-icons/svg/overseerr.svg"
-        subtitle: "Request Content"
+      - name: "qBittorrent"
+        logo: "assets/homer-icons/svg/qbittorrent.svg"
+        subtitle: "Torrents"
         tag: "app"
         keywords: "p2p"
-        url: "https://overseerr.danteb.com"
+        url: "https://qbittorrent.danteb.com"
         target: "_blank" # optional html a tag target attribute
+      - name: "SABnzbd"
+        logo: "assets/homer-icons/svg/sabnzbd.svg"
+        subtitle: "NZB"
+        tag: "app"
+        keywords: "p2p"
+        url: "https://sabnzbd.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+  - name: "Starr"
+    icon: "fas fa-stars"
+    items:
       - name: "Radarr"
         logo: "assets/homer-icons/svg/radarr.svg"
         subtitle: "Movies"
@@ -200,17 +204,20 @@ services:
         keywords: "p2p"
         url: "https://prowlarr.danteb.com"
         target: "_blank" # optional html a tag target attribute
-      - name: "qBittorrent"
-        logo: "assets/homer-icons/svg/qbittorrent.svg"
-        subtitle: "Torrents"
+  - name: "Networking"
+    icon: "fas fa-network-wired"
+    items:
+      - name: "Adguard Home"
+        logo: "assets/homer-icons/svg/adguardhome.svg"
+        subtitle: "Ad-Blocking DNS & DHCP"
         tag: "app"
-        keywords: "p2p"
-        url: "https://qbittorrent.danteb.com"
+        keywords: "network"
+        url: "https://adguard.danteb.com"
         target: "_blank" # optional html a tag target attribute
-      - name: "SABnzbd"
-        logo: "assets/homer-icons/svg/sabnzbd.svg"
-        subtitle: "NZB"
+      - name: "Nginx Proxy Manager"
+        logo: "assets/homer-icons/png/nginxproxymanager.png"
+        subtitle: "Reverse Proxy"
         tag: "app"
-        keywords: "p2p"
-        url: "https://sabnzbd.danteb.com"
+        keywords: "media"
+        url: "https://nginx-proxy-manager.danteb.com"
         target: "_blank" # optional html a tag target attribute

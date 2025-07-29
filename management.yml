@@ -2,7 +2,7 @@ subtitle: "Manage the Home Server"
 
 # This overwrites message config. Setting it to empty to remove message from this page and keep it only in the main one:
 message:
-  title: "Important"
+  title: "Home Only"
   icon: "fa fa-house-laptop"
   content: "You can only manage the server while connected to the home network."
 
@@ -19,6 +19,9 @@ links:
     icon: "fab fa-linux"
     url: "https://github.com/dantebarbieri/homeserver-nixos"
     target: "_blank" # optional html a tag target attribute
+  - name: "Management"
+    icon: "fas fa-file-alt"
+    url: "#management"
 
 services:
   - name: "Management"
