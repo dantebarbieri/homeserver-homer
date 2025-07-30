@@ -41,3 +41,13 @@ services:
         keywords: "management"
         url: "https://www.routerlogin.com"
         target: "_blank" # optional html a tag target attribute
+  - name: "Alerts"
+    icon: "fas fa-bell"
+    items:
+      - name: "ntfy"
+        logo: "assets/tools/ntfy_logo.png"
+        subtitle: "Push Notifications"
+        tag: "mobile"
+        keywords: "notify"
+        url: "https://ntfy.danteb.com"
+        targets: "_blank"
