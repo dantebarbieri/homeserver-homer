@@ -127,9 +127,9 @@ services:
         target: "_blank" # optional html a tag target attribute
       - name: "Suwayomi"
         logo: "assets/tools/suwayomi_logo.png"
-        subtitle: "Manga, Manhwa, Manhua, & WebToons"
+        subtitle: "Manga & WebToons"
         tag: "remote app"
-        keywords: "mihon tachiyomi"
+        keywords: "mihon tachiyomi manga manhwa manhua"
         url: "https://suwayomi.danteb.com/"
         target: "_blank" # optional html a tag target attribute
       - name: "Immich"
