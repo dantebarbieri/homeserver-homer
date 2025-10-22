@@ -163,13 +163,6 @@ services:
         keywords: "utilities search searx"
         url: "https://searxng.danteb.com"
         target: "_blank" # optional html a tag target attribute
-      - name: "Syncthing"
-        logo: "assets/homer-icons/svg/syncthing.svg"
-        subtitle: "File Synchronization"
-        tag: "app"
-        keywords: "sync dropbox df dwarf-fortress dwarf fortress"
-        url: "https://syncthing.danteb.com"
-        target: "_blank" # optional html a tag target attribute
       - name: "Vaultwarden"
         logo: "assets/homer-icons/png/vaultwarden.png"
         subtitle: "Password Manager"
