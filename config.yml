@@ -52,7 +52,7 @@ colors:
 # Optional message
 message:
   # url: https://github.com/dantebarbieri/homeserver-homer
-#   style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  #   style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
   title: "Homer Homepage"
   icon: "fa fa-home"
   content: "This homepage uses <a href='https://github.com/bastienwirtz/homer'>Homer</a> to display all the services running on my home server. You can find the source code on <a href='https://github.com/dantebarbieri/homeserver-homer'>GitHub</a>."
@@ -71,11 +71,11 @@ links:
     icon: "fab fa-linux"
     url: "https://github.com/dantebarbieri/homeserver-nixos"
     target: "_blank" # optional html a tag target attribute
-#   - name: "Wiki"
-#     icon: "fas fa-book"
-#     url: "https://www.wikipedia.org/"
-#   # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
-#   # see url field and assets/additional-page.yml.dist used in this example:
+  #   - name: "Wiki"
+  #     icon: "fas fa-book"
+  #     url: "https://www.wikipedia.org/"
+  #   # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
+  #   # see url field and assets/additional-page.yml.dist used in this example:
   - name: "Management"
     icon: "fas fa-file-alt"
     url: "#management"
@@ -118,6 +118,20 @@ services:
         keywords: "media"
         url: "https://plex.danteb.com"
         target: "_blank" # optional html a tag target attribute
+      - name: "Komga"
+        logo: "assets/homer-icons/png/komga.png"
+        subtitle: "Reader"
+        tag: "remote app"
+        keywords: "manga manhwa manhua ebooks e-books"
+        url: "https://komga.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Suwayomi"
+        logo: "assets/tools/suwayomi_logo.png"
+        subtitle: "Manga, Manhwa, Manhua, & WebToons"
+        tag: "remote app"
+        keywords: "mihon tachiyomi"
+        url: "https://suwayomi.danteb.com/"
+        target: "_blank" # optional html a tag target attribute
       - name: "Immich"
         logo: "assets/homer-icons/svg/immich.svg"
         subtitle: "Photos"
@@ -148,6 +162,13 @@ services:
         tag: "app"
         keywords: "utilities search searx"
         url: "https://searxng.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Syncthing"
+        logo: "assets/homer-icons/svg/syncthing.svg"
+        subtitle: "File Synchronization"
+        tag: "app"
+        keywords: "sync dropbox df dwarf-fortress dwarf fortress"
+        url: "https://syncthing.danteb.com"
         target: "_blank" # optional html a tag target attribute
       - name: "Vaultwarden"
         logo: "assets/homer-icons/png/vaultwarden.png"
@@ -207,13 +228,13 @@ services:
   - name: "Networking"
     icon: "fas fa-network-wired"
     items:
-      - name: "Adguard Home"
-        logo: "assets/homer-icons/svg/adguardhome.svg"
-        subtitle: "Ad-Blocking DNS & DHCP"
-        tag: "app"
-        keywords: "network"
-        url: "https://adguard.danteb.com"
-        target: "_blank" # optional html a tag target attribute
+      # - name: "Adguard Home"
+      #   logo: "assets/homer-icons/svg/adguardhome.svg"
+      #   subtitle: "Ad-Blocking DNS & DHCP"
+      #   tag: "app"
+      #   keywords: "network"
+      #   url: "https://adguard.danteb.com"
+      #   target: "_blank" # optional html a tag target attribute
       - name: "Nginx Proxy Manager"
         logo: "assets/homer-icons/png/nginxproxymanager.png"
         subtitle: "Reverse Proxy"
