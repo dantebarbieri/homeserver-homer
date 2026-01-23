@@ -101,6 +101,20 @@ services:
         keywords: "game mc minecraft"
         url: "https://mcsrvstat.us/server/rlcraft.danteb.com"
         target: "_blank" # optional html a tag target attribute
+      - name: "Hytale"
+        logo: "assets/tools/hytale_logo.png"
+        subtitle: "danteb.com:5205"
+        tag: "server"
+        keywords: "game hytale"
+        url: "https://hytale-servers.com/server/dante-s-hytale-server"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Satisfactory"
+        logo: "assets/tools/satisfactory_logo.png"
+        subtitle: "danteb.com:7778"
+        tag: "server"
+        keywords: "game satisfactory factory"
+        url: "https://store.steampowered.com/app/526870/Satisfactory/"
+        target: "_blank" # optional html a tag target attribute
   - name: "Media"
     icon: "fas fa-tv"
     items:
