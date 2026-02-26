@@ -132,6 +132,13 @@ services:
         keywords: "media"
         url: "https://plex.danteb.com"
         target: "_blank" # optional html a tag target attribute
+      - name: "Jellyfin"
+        logo: "assets/homer-icons/svg/jellyfin.svg"
+        subtitle: "Movies & TV"
+        tag: "remote app"
+        keywords: "media"
+        url: "https://jellyfin.danteb.com"
+        target: "_blank" # optional html a tag target attribute
       - name: "Komga"
         logo: "assets/homer-icons/png/komga.png"
         subtitle: "Reader"
