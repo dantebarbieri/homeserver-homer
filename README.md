@@ -73,3 +73,32 @@ Edit [`.env`](.env) to add the secrets.
 ```bash
 docker compose up -d
 ```
+
+## Updating Homer Icons
+
+The dashboard icons come from the [homer-icons](https://github.com/NX211/homer-icons) repository, included as a git submodule at `homer-icons/`. To get the latest icons (e.g., after new services are added to the icon pack):
+
+**Manual update:**
+```bash
+cd /opt/docker/compose/homeserver/homer
+git submodule update --remote homer-icons
+git add homer-icons
+git commit -m "Update homer-icons submodule"
+git push
+```
+
+**Automatic updates (optional):**
+
+Add a cron job to pull the latest icons weekly:
+
+```bash
+crontab -e
+```
+
+Add the following line (runs every Sunday at 3 AM):
+```
+0 3 * * 0 cd /opt/docker/compose/homeserver/homer && git submodule update --remote homer-icons && git add homer-icons && git diff --cached --quiet || git commit -m "Update homer-icons submodule" && git push
+```
+
+> [!TIP]
+> After updating the submodule, Homer will pick up the new icons automatically on the next page load — no container restart is needed since the icons directory is volume-mounted.
