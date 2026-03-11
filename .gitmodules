@@ -1,3 +1,4 @@
 [submodule "homer-icons"]
 	path = homer-icons
 	url = git@github.com:NX211/homer-icons.git
+	branch = master
