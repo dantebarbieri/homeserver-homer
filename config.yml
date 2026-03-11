@@ -239,6 +239,23 @@ services:
         keywords: "p2p"
         url: "https://prowlarr.danteb.com"
         target: "_blank" # optional html a tag target attribute
+  - name: "Communication"
+    icon: "fas fa-comments"
+    items:
+      - name: "Element"
+        logo: "assets/homer-icons/png/element.png"
+        subtitle: "Matrix Chat & Calls"
+        tag: "app"
+        keywords: "chat matrix messaging voice video calls discord"
+        url: "https://element.danteb.com"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Synapse"
+        logo: "assets/homer-icons/png/synapse.png"
+        subtitle: "Matrix Homeserver"
+        tag: "app"
+        keywords: "matrix server federation"
+        url: "https://matrix.danteb.com"
+        target: "_blank" # optional html a tag target attribute
   - name: "Networking"
     icon: "fas fa-network-wired"
     items:
