@@ -256,6 +256,13 @@ services:
         keywords: "matrix server federation"
         url: "https://matrix.danteb.com"
         target: "_blank" # optional html a tag target attribute
+      - name: "LiveKit"
+        logo: "assets/homer-icons/svg/matrix.svg"
+        subtitle: "MatrixRTC Backend"
+        tag: "app"
+        keywords: "matrix rtc voip video calls livekit sfu webrtc"
+        url: "https://livekit.danteb.com"
+        target: "_blank" # optional html a tag target attribute
   - name: "Networking"
     icon: "fas fa-network-wired"
     items:
